@@ -17,7 +17,7 @@ namespace Toolkit
         /// <summary>
         ///     List of supported devices
         /// </summary>
-        private static readonly string[] SupportedDevices = { "tf700t", "tf300t", "me301t", "hammerhead", "hammerheadcaf" };
+        private static readonly string[] SupportedDevices = { "tf700t", "tf300t", "tf300tg", "me301t", "hammerhead", "hammerheadcaf" };
 
         public string SerialNumber { get; }
         public string DeviceName { get; }
