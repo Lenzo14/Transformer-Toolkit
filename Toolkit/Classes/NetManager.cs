@@ -79,7 +79,11 @@ namespace Toolkit
         {
             return ResolveFromManifest(Recovery.Twrp, "version", device);
         }
-
+        
+        private static string ResolveTwrpDeviceName(Device device)
+        {
+            return device?.CodeName == "tf300tg" ? "tf300t" : device?.CodeName;
+            
         public static Uri GetTwrpUrl(Device device)
         {
             return new Uri(ResolveFromManifest(Recovery.Twrp, "url", device));
@@ -111,7 +115,7 @@ namespace Toolkit
             var descendants = xml.Root?.Descendants(type);
             // Select the twrp version according to the device
             if (type.Equals(Recovery.Twrp))
-                descendants = descendants?.Where(desc => desc.Attribute("device").Value == device?.CodeName);
+                descendants = descendants?.Where(desc => desc.Attribute("device").Value == ResolveTwrpDeviceName(device));
             var output = descendants?.First().Element(tag)?.Value;
             return tag.Equals("url") ? ResolveGoogleDriveStaticUrl(output) : output;
         }
