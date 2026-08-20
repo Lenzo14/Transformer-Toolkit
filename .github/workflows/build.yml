@@ -14,6 +14,12 @@ jobs:
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v2
 
+      - name: Install .NET Framework 4.6.1 targeting pack
+        run: |
+          Invoke-WebRequest -Uri "https://download.microsoft.com/download/A/1/D/A1D07600-6915-4B9E-B7DA-A98570662D2B/NDP461-DevPack-KB3105179-ENU.exe" -OutFile "ndp461-devpack.exe"
+          Start-Process -FilePath "ndp461-devpack.exe" -ArgumentList "/quiet", "/norestart" -Wait
+        shell: powershell
+
       - name: Build
         run: msbuild "Transformer Toolkit.sln" /p:Configuration=Build /p:Platform="Any CPU"
 
