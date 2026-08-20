@@ -83,7 +83,8 @@ namespace Toolkit
         private static string ResolveTwrpDeviceName(Device device)
         {
             return device?.CodeName == "tf300tg" ? "tf300t" : device?.CodeName;
-            
+        }
+        
         public static Uri GetTwrpUrl(Device device)
         {
             return new Uri(ResolveFromManifest(Recovery.Twrp, "url", device));
