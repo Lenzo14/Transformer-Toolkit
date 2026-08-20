@@ -27,7 +27,7 @@ namespace Toolkit
                     break;
                 case "tf700t":
                 case "tf300t":
-                case "tf300tg"
+                case "tf300tg":
                 case "me301t":
                     toolkit.InvokeLog("Downloading Asus Unlock Tool v8 ...");
                     NetManager.DownloadFileAsync(NetManager.GetUnlockerUrl(), UnlockerPath, _toolkit.InvokeLog, InstallUnlocker);
