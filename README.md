@@ -1,5 +1,5 @@
 # Transformer Toolkit
-A toolkit for the Asus Transformer Pad Infinity TF700T, the Asus Transformer Pad TF300T, the Nexus 5 (CAF), and the Asus MeMo Pad Smart 10.
+A toolkit for the Asus Transformer Pad Infinity TF700T, the Asus Transformer Pad TF300T, the Nexus 5 (CAF), the ASUS Transformer Pad TF300TG and the Asus MeMo Pad Smart 10.
 You can easily unlock the bootloader of your device and flash a recovery of your choice without having the Android SDK installed.
 
 ## Prerequisites
